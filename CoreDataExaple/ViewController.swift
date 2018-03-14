@@ -9,17 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var user: [User]? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        
+        if CoreDateHandler.saveObject(username: "Max", password: "12345") {
+            user = CoreDateHandler.fetchObject()
+            
+            for i in user! {
+                print("i.username: ", i.username ?? "", "i.password: ", i.password ?? "")
+            }
+        }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
 
 }
 

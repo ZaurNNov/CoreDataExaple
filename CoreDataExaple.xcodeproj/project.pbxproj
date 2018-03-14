@@ -13,6 +13,7 @@
 		636806E4205998E00024E378 /* CoreDataExaple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 636806E2205998E00024E378 /* CoreDataExaple.xcdatamodeld */; };
 		636806E6205998E00024E378 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 636806E5205998E00024E378 /* Assets.xcassets */; };
 		636806E9205998E00024E378 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636806E7205998E00024E378 /* LaunchScreen.storyboard */; };
+		636806F12059995A0024E378 /* CoreDateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636806F02059995A0024E378 /* CoreDateHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		636806E5205998E00024E378 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		636806E8205998E00024E378 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		636806EA205998E00024E378 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		636806F02059995A0024E378 /* CoreDateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDateHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				636806E7205998E00024E378 /* LaunchScreen.storyboard */,
 				636806EA205998E00024E378 /* Info.plist */,
 				636806E2205998E00024E378 /* CoreDataExaple.xcdatamodeld */,
+				636806F02059995A0024E378 /* CoreDateHandler.swift */,
 			);
 			path = CoreDataExaple;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				636806DE205998E00024E378 /* ViewController.swift in Sources */,
+				636806F12059995A0024E378 /* CoreDateHandler.swift in Sources */,
 				636806E4205998E00024E378 /* CoreDataExaple.xcdatamodeld in Sources */,
 				636806DC205998E00024E378 /* AppDelegate.swift in Sources */,
 			);
