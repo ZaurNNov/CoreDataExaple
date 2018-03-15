@@ -47,7 +47,6 @@ class CoreDateHandler: NSObject {
             return user
         }
     }
-    
 
     class func deleteObject(user: User) -> Bool {
         let context = getContext()
@@ -74,6 +73,24 @@ class CoreDateHandler: NSObject {
         } catch {
             print ("cleanDelete() -> Bool - FAILED")
             return false
+        }
+    }
+    
+    class func filterData() -> [User]? {
+        let context = getContext()
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        var user: [User]? = nil
+        
+        let predicate = NSPredicate(format: "username contains[c] %@", "9")
+        fetchRequest.predicate = predicate
+        
+        do {
+            user = try context.fetch(fetchRequest)
+            print("filterData() -> [User]?... OK")
+            return user
+        } catch {
+            print("filterData() -> [User]? - FAILED")
+            return user
         }
     }
 }
