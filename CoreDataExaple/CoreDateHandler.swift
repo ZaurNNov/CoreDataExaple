@@ -27,8 +27,10 @@ class CoreDateHandler: NSObject {
         
         do {
             try context.save()
+            print("saveObject(username: String, password: String)... OK")
             return true
         } catch  {
+            print ("saveObject(username: String, password: String) -> Bool - FAILED")
             return false
         }
     }
@@ -38,9 +40,40 @@ class CoreDateHandler: NSObject {
         var user: [User]? = nil
         do {
             user = try context.fetch(User.fetchRequest())
+            print("fetchObject() -> [User]?... OK")
             return user
         } catch {
+            print ("fetchObject() -> [User]? - FAILED")
             return user
+        }
+    }
+    
+
+    class func deleteObject(user: User) -> Bool {
+        let context = getContext()
+        context.delete(user)
+        
+        do {
+            try context.save()
+            print("deleteObject(user: User)... OK")
+            return true
+        } catch {
+            print ("deleteObject(user: User) -> Bool - FAILED")
+            return false
+        }
+    }
+    
+    class func cleanDelete() -> Bool {
+        let context = getContext()
+        let delete = NSBatchDeleteRequest(fetchRequest: User.fetchRequest())
+        
+        do {
+            try context.execute(delete)
+            print("cleanDelete()... OK")
+            return true
+        } catch {
+            print ("cleanDelete() -> Bool - FAILED")
+            return false
         }
     }
 }
